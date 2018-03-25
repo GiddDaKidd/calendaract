@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Calendaract</title>
+    <title>🚀 Calendaract</title>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73825532-3"></script>
+    <% if Rails.env.production? %>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-73825532-3');
+        </script>
+    <% end %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <h1><%= link_to "🏠", "http://bxmark.net/" %></h1>
+        <h1><%= link_to "BxMark Store Open 🏪hrs", :root, data: { turbolinks: false } %></h1>
+      </header>
+      <%= yield %>
+      <div class="footer">
+        <%= link_to "Bxmark Corporation", "http://bxmark.net/", style: "text-decoration: underline;" %>
+        <p>Contact: ino@bxmark.net</p>
+      </div>
+    </div>
   </body>
 </html>
