@@ -5,7 +5,7 @@
   <h3>Free shipping anywhere in the world!</h3>
   <h3>$10</h3>
   <div class="sticker">
-    <%= image_tag ("https://achievement-images.teamtreehouse.com/badges_WebsiteIsland1_Stage5.png")%>
+    <%= image_tag ("https://achievement-images.teamtreehouse.com/badges_python_basics_stage1.png")%>
     <%= form_tag charges_path do %>
     <article>
       <% if flash[:error].present? %>
@@ -17,10 +17,15 @@
 
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="A month's subscription"
-            data-amount="500"
-            data-locale="auto"></script>
+            data-description="Web Developer Beginner Notes"
+            data-amount="1000"
+            data-locale="auto"
+            data-image="http://bxmark.net/assets/images/Bxmarkwlogo.png"
+            data-locale="auto"
+
+            ></script>
   <% end %>
+</div>
 </div>
 <div class="product">
   <h2>5 notes on Python Development</h2>
