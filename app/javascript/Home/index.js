@@ -3,7 +3,7 @@ import ProductsList from './ProductsList'
 import Cart from './Cart'
 import axios from 'axios'
 
-class Store extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -61,4 +61,4 @@ class Store extends Component {
   }
 }
 
-export default Store
+export default Home

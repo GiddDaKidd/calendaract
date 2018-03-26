@@ -6,7 +6,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Store products={this.props.products} />
+        <Home products={this.props.products} />
       </div>
     )
   }
