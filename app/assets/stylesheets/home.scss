@@ -63,7 +63,9 @@ header {
   height: 100%;
   border-bottom: dotted 1px black;
   img {
-
+    display: block;
+    margin: auto;
+    padding-bottom: 1em;
   }
 }
 
